@@ -1,9 +1,5 @@
-server:
-  port: 7002
 
 spring:
-  application:
-    name: admanagement-provider-server
     ## redis相关配置
   redis:
     host: 127.0.0.1
@@ -82,26 +78,6 @@ spring:
 #            partitionKeyExpression: payload.sign
 #            #Key和分区数量进行取模去分配消息，这里分区数量配置为2
 #            partitionCount: 2
-
-eureka:
-  client:
-    service-url:
-      #defaultZone 这个是不会提示的，此处需要自己写
-      #实际上属性应该是service-url,这个属性是个map（key-value）格式；当key是defaultZone的时候才能被解析；所以这里没有提示，
-      #但是自己还需要写一个defaultZone；
-      #defaultZone: http://eureka5060.com:5060/eureka/,http://eureka5061.com:5061/eureka/,http://eureka5062.com:5062/eureka/
-      defaultZone: http://localhost:5060/eureka
-    #表示是否将自己注册进EurekaServer,默认为true
-    register-with-eureka: true
-    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
-    fetch-registry: true
-  instance:
-    instance-id: admanagement7002
-    prefer-ip-address: true #访问路径可以显示IP地址
-    #Eureka客户端向服务端发送心跳的时间间隔，单位为秒（默认是30秒）
-    #lease-renewal-interval-in-seconds: 1
-    #Eurekaf服务端在收到最后一次心跳后等待时间上限，单位为秒（默认是90秒），超时将剔除服务
-    #lease-expiration-duration-in-seconds: 2
 
 mybatis-plus:
   # 在classpath前添加星号可以使项目热加载成功
