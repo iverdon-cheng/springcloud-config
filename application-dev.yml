@@ -1,9 +1,6 @@
-server:
-  port: 8111
 
 spring:
   application:
-    name: event-clickhouse
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #url: jdbc:clickhouse://110.43.46.58:18123/event
@@ -73,16 +70,6 @@ mybatis-plus:
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-eureka:
-  client:
-    service-url:
-      #defaultZone 这个是不会提示的，此处需要自己写
-      #实际上属性应该是service-url,这个属性是个map（key-value）格式；当key是defaultZone的时候才能被解析；所以这里没有提示，
-      #但是自己还需要写一个defaultZone；
-      defaultZone: http://localhost:5060/eureka
-  instance:
-    instance-id: eventclickhouse8111
-    prefer-ip-address: true #访问路径可以显示IP地址
 
 
 ribbon:
