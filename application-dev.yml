@@ -4,7 +4,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #url: jdbc:clickhouse://110.43.46.58:18123/event
-    url: jdbc:clickhouse://192.168.0.180:8123/event
+    url: jdbc:clickhouse://192.168.0.180:8124/event
     driverClassName: ru.yandex.clickhouse.ClickHouseDriver
     username: ww
     password: 123456
