@@ -8,10 +8,6 @@ spring:
     driverClassName: ru.yandex.clickhouse.ClickHouseDriver
     username: ww
     password: 123456
-  
-config:
-   info: 23
-
     #druid连接池配置
     #初始化时建立物理连接的个数
     initialSize: 5
@@ -78,3 +74,6 @@ mybatis-plus:
 ribbon:
   eureka:
     enabled: true
+
+config:
+   info: 23
