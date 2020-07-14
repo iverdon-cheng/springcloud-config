@@ -54,7 +54,7 @@ spring:
     userGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
   #发送数据到kafka
-  cloud:
+#  cloud:
 #     stream:
 #       kafka:
 #         binder:
