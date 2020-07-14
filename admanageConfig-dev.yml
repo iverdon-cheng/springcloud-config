@@ -1,4 +1,3 @@
-
 spring:
     ## redis相关配置
   redis:
