@@ -55,23 +55,23 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
   #发送数据到kafka
   cloud:
-    stream:
-      kafka:
-        binder:
-          #Kafka的消息中间件服务器
-          brokers: 192.168.0.76:9092
-          #Zookeeper的节点，如果集群，后面加,号分隔
-          zk-nodes: 192.168.0.76:2181
-          #如果设置为false,就不会自动创建Topic 有可能你Topic还没创建就直接调用了。
-          auto-create-topics: true
-          autoAddPartitions: true
-      bindings:
-        #初始化记录用户信息
-        initoutput:
-          #消息发往的目的地
-          destination: stream-init
-          #消息发送的格式，接收端不用指定格式，但是发送端要
-          content-type: application/json
+#     stream:
+#       kafka:
+#         binder:
+#           #Kafka的消息中间件服务器
+#           brokers: 192.168.0.76:9092
+#           #Zookeeper的节点，如果集群，后面加,号分隔
+#           zk-nodes: 192.168.0.76:2181
+#           #如果设置为false,就不会自动创建Topic 有可能你Topic还没创建就直接调用了。
+#           auto-create-topics: true
+#           autoAddPartitions: true
+#       bindings:
+#         #初始化记录用户信息
+#         initoutput:
+#           #消息发往的目的地
+#           destination: stream-init
+#           #消息发送的格式，接收端不用指定格式，但是发送端要
+#           content-type: application/json
 #          producer:
 #            #分区的主键，根据什么来分区，下面的payload.id只是一个对象的id用于做为Key，用来说明的。希望不要误解
 #            partitionKeyExpression: payload.sign
